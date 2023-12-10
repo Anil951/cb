@@ -1,0 +1,371 @@
+      /* Google Fonts */
+      @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+      /* Global */
+      html {
+        min-height: 100%;
+      }
+
+      body {
+        margin: 0; /* Reset default margin */
+        color: rgba(255, 255, 255, 0.75);
+        font-family: "Anonymous Pro", monospace;
+        background-attachment:fixed;
+        background-color: rgb(25, 25, 25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+      
+
+      .line-1 {
+        position: relative;
+        top: 50%;
+        width: 24em;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
+        font-size: 300%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(-50%);
+      }
+
+      /* Animation */
+      .anim-typewriter {
+        animation: typewriter 4s steps(22) infinite,
+          blinkTextCursor 200ms steps(22) infinite normal;
+      }
+
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 10em;
+        }
+      }
+
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: rgba(255, 255, 255, 0.75);
+        }
+
+        to {
+          border-right-color: transparent;
+        }
+      }
+
+      .arrow {
+        position: relative;
+        bottom: -30em;
+        left: 50%;
+        margin-left: -20px;
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        fill: white;
+        cursor: pointer;
+      }
+
+      .arrow svg {
+        fill: rgba(255, 255, 255, 0.75);
+      }
+
+      .bounce {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+
+        40% {
+          transform: translateY(-30px);
+        }
+
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+
+      /* Adjusted height of the sections */
+      #section1 {
+        height: 100vh;
+      }
+
+      #aboutSection,
+      #contactSection {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        height: 100vh;
+        width: 98vw;
+        background-color: #000000;
+        color: white;
+        text-align: center;
+      }
+
+      #aboutSection p {
+        margin: 0 auto; /* Center the text horizontally */
+        max-width: 800px; /* Set a maximum width for the text */
+        font-size: larger;
+      }
+
+      .pdf-links {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Adjust the gap as needed */
+        margin-top: 20px; /* Add some top margin for spacing */
+      }
+
+      .pdf-links a,
+      #tocontact {
+        color: rgb(0, 162, 255); /* Change the color as needed */
+      }
+      #tocontact{
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      #section2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        width: 98vw;
+        background-color: #161616;
+        
+      }
+      
+      .box {
+        position: relative;
+        width: 25%;
+        height: 50%;
+        background-color: #fff;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: black;
+        border-radius: 10%;
+        overflow: hidden; /* Ensure content doesn't overflow the box */
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add box-shadow transition */
+      
+        /* Add box-shadow for a lifted effect */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .box:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+      }
+      
+      /* Add some styling to the heading */
+      .box h2 {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+      
+      /* Add some styling to the paragraph */
+      .box p {
+        font-size: 1.2em;
+        color: #555;
+      }
+      
+      /* Add a border to the box */
+      .box:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        border: 2px solid #333; /* Adjust border color */
+        border-radius: 10%; /* Match the box border-radius */
+        pointer-events: none; /* Ensure the border doesn't interfere with clicks */
+      }
+      
+
+      .about {
+        display: none;
+      }
+
+      .expanded-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #181818;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: rgb(212, 212, 212);
+        z-index: 2;
+      }
+
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background-color: #3d3d3d;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 3;
+        
+      }
+      .back-button:hover{
+        transform: scale(1.1);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+      }
+
+      .container {
+        display: flex;
+        align-items: center; /* Align items vertically */
+        justify-content: space-between; /* Space between items */
+        max-width: 80%; /* Adjust the maximum width as needed */
+        margin: 0 auto; /* Center the container */
+        height: 70%;
+      }
+
+      .box-text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        height: 100%;
+        width: 70%;
+        padding-left: 20px;
+        font-size: large;
+        align-items: center;
+      }
+
+      .box-image {
+        width: 35%; /* Adjust the width as needed */
+        
+      }
+
+      .points {
+        display: flex;
+    max-width: 800px;
+    margin: 15px 30px;
+    
+}
+
+
+      
+
+      .points ul,
+      .points li {
+        margin-bottom: 10px; /* Adjust the margin as needed */
+        list-style-position: outside;
+      }
+
+      #contactSection {
+    text-align: center;
+
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+    
+    gap: 10px;
+  }
+
+  .contact-person {
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+  }
+
+  #contactSection {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #instagram-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  #instagram-logo {
+    width: 35px; /* Adjust the size of the logo as needed */
+  }
+
+
+  /* scroll bar styling */
+
+  /* Add the following styles to your existing CSS */
+
+/* For Webkit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000; /* Set the color of the scrollbar thumb */
+  border-radius: 4px; /* Optional: Add rounded corners to the thumb */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the color of the scrollbar track */
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #000 transparent;
+}
+
+/* Optional: Add rounded corners to the scrollbar thumb in Firefox */
+body {
+  scrollbar-color: #000 transparent;
+}
+
+body::-moz-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 4px;
+}
+
+body::-moz-scrollbar-track {
+  background-color: transparent;
+}
+

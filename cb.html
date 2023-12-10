@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- when scroll animations github library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>CodeBreakers</title>
+    <link rel="stylesheet" href="cb.css"> <!-- Link to external CSS file -->
+  </head>
+
+  <body>
+    
+    <div id="section1" data-aos="fade-in">
+        <div style="background: linear-gradient(-45deg, #111, #222, #333, #444);
+                background-size: 400% 400%;
+                background-attachment:fixed;
+                animation: gradient 15s ease infinite;
+                height: 100vh;">
+      <p class="line-1 anim-typewriter">Code Breakers....</p>
+      <div class="arrow bounce" onclick="scrollToSection2()">
+        <svg
+          version="1.0"
+          xmlns="http://www.w3.org/2000/svg"
+          width="50px"
+          height="50px"
+          viewBox="0 0 512.000000 512.000000"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <g
+            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+            fill="ffffff"
+            stroke="none"
+          >
+            <path
+              d="M1413 3230 c-59 -36 -89 -106 -73 -173 8 -36 71 -103 567 -599 307
+-308 570 -566 585 -574 35 -18 101 -18 136 0 15 8 278 266 585 574 606 607
+590 587 567 673 -26 96 -122 144 -217 108 -15 -5 -247 -229 -515 -497 l-488
+-487 -487 487 c-269 268 -501 492 -516 497 -44 17 -109 13 -144 -9z"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div id="aboutSection" data-aos="fade-in">
+      <br /><br /><br /><br /><br />
+      <h1>About the Event</h1>
+      <br /><br /><br />
+      <p>
+        Welcome to <span style="font-size: x-large;"><b>CODE BREAKERS</b></span>, an exciting coding competition that challenges your skills in
+        aptitude, logic assembly, and code revival.
+      </p>
+      <br /><br />
+      <p>
+        Join us for a thrilling experience where you can showcase your coding
+        prowess and problem-solving abilities. Get ready for three rounds of
+        intense competition, where only the best will emerge victorious. Are you
+        up for the challenge? 
+      </p>
+      <br /><br />
+      <p>Scroll down to learn more about each round!</p>
+      <br /><br />
+      <div class="pdf-links">
+        <div>
+          <a href="static/CODEBREAKERS.pdf" target="_blank"
+          style="color:lightblue">Event Poster</a
+          >
+        </div>
+        <div>
+          <a href="static/Code BreakerS PPT.pdf" target="_blank"
+          style="color:lightblue">About Event in Detail</a
+          >
+        </div>
+      </div>
+      <br /><br />
+      <a id="tocontact" onclick="scrollToContact()"
+      style="color:lightblue">Contact Us</a
+      >
+    </div>
+
+    <!-- Second Section -->
+    <div id="section2" data-aos="fade-in">
+      <!-- Content for the second section goes here -->
+      <div class="box" id="box1" onclick="expandBox('box1')">
+        <h2>Round 1</h2>
+        <p>APTITUDE CHALLENGE</p>
+      </div>
+      <div class="box" id="box2" onclick="expandBox('box2')">
+        <h2>Round 2</h2>
+        <p>LOGIC ASSEMBLY</p>
+      </div>
+      <div class="box" id="box3" onclick="expandBox('box3')">
+        <h2>Round 3</h2>
+        <p>CODE REVIVAL</p>
+      </div>
+    </div>
+
+    <div id="contactSection" data-aos="fade-in">
+      
+        <br><br><br><br><br><h2>Contact Us 📞</h2>
+      
+        <div class="contact-info">
+          <div class="contact-person">
+            <h3>K Sushma 👩</h3>
+            <p>Phone: 9052012112 </p>
+          </div>
+          <div class="contact-person">
+            <h3>B Hari Krishna 🧑</h3>
+            <p>Phone: 9032467292 </p>
+          </div>
+        </div>
+      
+        <br><br>
+      
+        <div class="contact-info">
+          <div class="contact-person">
+            <h3>A Lokesh 🧑</h3>
+            <p>Phone: 9346496837 </p>
+          </div>
+          <div class="contact-person">
+            <h3>A Chandan 🧑</h3>
+            <p>Phone: 9391685345 </p>
+          </div>
+          <div class="contact-person">
+            <h3>B Anil Kumar 🧑</h3>
+            <p>Phone: 8688459201 </p>
+          </div>
+      
+          <div class="contact-person">
+            <h3>D Ashrita 👩</h3>
+            <p>Phone: 8688003436 </p>
+          </div>
+          <div class="contact-person">
+            <h3>S Anvith Reddy 🧑</h3>
+            <p>Phone: 7569096049 </p>
+          </div>
+        </div>
+      
+        <div id="instagram-section">
+          <h2>Reach Out to Us on </h2>
+          <a href="https://www.instagram.com/invites/contact/?i=whn43i17j97i&utm_content=t39w4pt" target="_blank">
+            <img src="static/instagram.png" alt="Instagram Logo" id="instagram-logo">
+          </a>
+        </div>
+      </div>
+
+    <div class="expanded-box" id="expandedBox" style="display: none"></div>
+
+    <script src="cb.js"></script> <!-- Link to external JS file -->
+
+    <!-- when scroll --animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init(
+        {duration:1500}
+      );
+    </script>
+
+  </body>
+</html>
